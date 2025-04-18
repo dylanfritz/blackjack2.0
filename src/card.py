@@ -9,18 +9,18 @@ class Card:
     def printCard(self):
         match self.suit:
             case "Hearts":
-                print(heartsCard(self.value),end="")
+                print(self.heartsCard(self.value))
             case "Diamonds":
-                print(diamondsCard(self.value),end="")
+                print(self.diamondsCard(self.value))
             case "Clubs":
-                print(clubsCard(self.value),end="")
+                print(self.clubsCard(self.value))
             case "Spades":
-                print(spadesCard(self.value),end="")
+                print(self.spadesCard(self.value))
             case _:
                 print("No card found for that suit")
 
 
-    def clubsCard(value) -> str:
+    def clubsCard(self,value) -> str:
         return f'''    _______________
         | {value}           |
         |             |
@@ -32,7 +32,7 @@ class Card:
         |           {value} |
         ---------------'''
 
-    def heartsCard(value) -> str:
+    def heartsCard(self,value) -> str:
         return f'''    _______________
         | {value}           |
         |             |
@@ -44,7 +44,7 @@ class Card:
         |           {value} |
         ---------------'''
 
-    def diamondsCard(value) -> str:
+    def diamondsCard(self,value) -> str:
         return f'''    _______________
         | {value}           |
         |             |
@@ -56,7 +56,7 @@ class Card:
         |           {value} |
         ---------------'''
 
-    def spadesCard(value) -> str:
+    def spadesCard(self,value) -> str:
         return f'''    _______________
         | {value}           |
         |             |

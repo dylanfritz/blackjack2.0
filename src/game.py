@@ -64,6 +64,8 @@ class Game:
 
         else: #player is human
             humanChoice = None
+            for card in player.heldCards:
+                card.printCard()
             while humanChoice != "hit" and humanChoice != "hold":
                 humanChoice = input(f"Player {player.name} your current score is {str(player.totalValue)}.\nDo you want to hit or hold?").lower()
             if humanChoice == "hit":
